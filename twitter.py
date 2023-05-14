@@ -12,4 +12,4 @@ def create_tweet():
     client.create_tweet(text="testing for the parsec api")
 
 # Call the function
-create_tweet()
+# create_tweet()
