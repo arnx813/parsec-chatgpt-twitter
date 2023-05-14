@@ -14,7 +14,7 @@ def endpoint():
         data = request.json
         chatgpt_tweet = chatbot_completion('i received this json  from parsec, a crypto analytics platform. please convert this json response into a hype twitter tweet. the tweet should be a few, continuous sentences, not bullet points. this tweet will be posted on a crypto news alert account. in ur response, do not provide any other text, only the tweet ' + str(data))
         print(chatgpt_tweet)
-        # create_tweet(chatgpt_tweet)
+        create_tweet(chatgpt_tweet)
 
         # Return a response if needed
         response = {'message': 'Request received successfully'}
