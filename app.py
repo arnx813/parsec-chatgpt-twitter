@@ -13,6 +13,7 @@ def endpoint():
     if request.method == 'POST':
         data = request.json
         print('i received this json request from parsec, a crypto analytics platform. please convert this json response an understandable tweet. in ur response, do not provide any other text, only the tweet\n', data)  # Example: Print the data to the console
+        chatbot_completion("asdfasdf")
 
         # Return a response if needed
         response = {'message': 'Request received successfully'}

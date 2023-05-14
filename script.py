@@ -5,14 +5,14 @@ def chatbot_completion(message):
 
     print(openai.api_key)
 
-    completion = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=[
-            {"role": "user", "content": message}
-        ]
-    )
+    # completion = openai.ChatCompletion.create(
+    #     model="gpt-3.5-turbo",
+    #     messages=[
+    #         {"role": "user", "content": message}
+    #     ]
+    # )
 
-    print(completion.choices[0].message.content)
+    # print(completion.choices[0].message.content)
 
 # Call the function and pass a message as a parameter
-chatbot_completion("tell me about your self.")
+# chatbot_completion("tell me about your self.")
