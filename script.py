@@ -1,19 +1,18 @@
 import openai
 
-def chatbot_completion():
-    openai.api_key = "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"
+def chatbot_completion(message):
+    openai.api_key = "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"
 
     print(openai.api_key)
 
     completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "user", "content": "Tell the world about the ChatGPT API in the style of a pirate."}
+            {"role": "user", "content": message}
         ]
     )
 
     print(completion.choices[0].message.content)
-    print('test')
 
-# Call the function
-chatbot_completion()
+# Call the function and pass a message as a parameter
+chatbot_completion("tell me about your self.")

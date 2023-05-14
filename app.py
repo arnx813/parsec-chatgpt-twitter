@@ -1,4 +1,6 @@
 from flask import Flask, request, jsonify
+from twitter import create_tweet
+from script import chatbot_completion
 
 app = Flask(__name__)
 
@@ -11,6 +13,7 @@ def endpoint():
     if request.method == 'POST':
         data = request.json  # Access the JSON data sent in the request
         # Process the data or perform any desired operations here
+
         print(data)  # Example: Print the data to the console
 
         # Return a response if needed
