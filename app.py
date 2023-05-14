@@ -1,6 +1,10 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 
 app = Flask(__name__)
+
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify({'message': 'Welcome to the home endpoint!'})
 
 @app.route('/endpoint', methods=['POST'])
 def endpoint():
@@ -10,7 +14,7 @@ def endpoint():
 
     # Return a response if needed
     response = {'message': 'Request received successfully'}
-    return response, 200
+    return jsonify(response), 200
 
 def print_app_info():
     print("Flask app is live and running!")
