@@ -11,10 +11,8 @@ def home():
 @app.route('/endpoint', methods=['GET', 'POST'])
 def endpoint():
     if request.method == 'POST':
-        data = request.json  # Access the JSON data sent in the request
-        # Process the data or perform any desired operations here
-
-        print(data)  # Example: Print the data to the console
+        data = request.json
+        print('i received this json request from parsec, a crypto analytics platform. please convert this json response an understandable tweet. in ur response, do not provide any other text, only the tweet\n', data)  # Example: Print the data to the console
 
         # Return a response if needed
         response = {'message': 'Request received successfully'}
