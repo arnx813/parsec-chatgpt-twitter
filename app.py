@@ -11,14 +11,17 @@ def endpoint():
     if request.method == 'POST':
         data = request.json  # Access the JSON data sent in the request
         # Process the data or perform any desired operations here
-        print(data)  # Example: Print the data to the console
+        # print(data)  # Example: Print the data to the console
+        print('this is a post request')
 
         # Return a response if needed
         response = {'message': 'Request received successfully'}
-        return jsonify(response), 200
+        return 'this is a post request'
+        # return jsonify(response), 200
     elif request.method == 'GET':
         # Handle the GET request for /endpoint
-        return jsonify({'message': 'GET request received for /endpoint'})
+        return 'this is a get request'
+        # return jsonify({'message': 'GET request received for /endpoint'})
 
 def print_app_info():
     print("Flask app is live and running!")
