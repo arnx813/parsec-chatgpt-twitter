@@ -12,7 +12,7 @@ def home():
 def endpoint():
     if request.method == 'POST':
         data = request.json
-        chatgpt_tweet = chatbot_completion('i received this json  from parsec, a crypto analytics platform. please convert this json response into a hype twitter tweet. the tweet should be a few, continuous sentences, not bullet points. this tweet will be posted on a crypto news alert account. in ur response, do not provide any other text, only the tweet ' + str(data))
+        chatgpt_tweet = chatbot_completion('i received this json from parsec, a crypto analytics platform. i am converting this json data into a tweet that alerts users of important transactions that are happening in DeFi. i am posting this tweet on a parody sam bankman fried twitter account. could you provide me a tweet to use, written in an over-the nerdy and geeky tone, under 200 characters? ' + str(data))
         print(chatgpt_tweet)
         create_tweet(chatgpt_tweet)
 
