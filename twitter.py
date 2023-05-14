@@ -1,6 +1,6 @@
 import tweepy
 
-def create_tweet():
+def create_tweet(chatgpt_tweet):
     consumer_key = "DzxByQz6RSXs5ye8hd0lo74WB"
     consumer_secret = "fwtBhjC7hCpj5WtOlT5kpJhTNJCSjgRclfDXGaGOkIpTLuBkUU"
     access_token = "1657500964319002624-hzziYst9gV7AbFYsBZvHhYIyuIlZf1"
@@ -9,7 +9,4 @@ def create_tweet():
 
     client = tweepy.Client(bearer_token=bearer, consumer_key=consumer_key, consumer_secret=consumer_secret, access_token=access_token, access_token_secret=access_token_secret)
 
-    client.create_tweet(text="testing for the parsec api")
-
-# Call the function
-# create_tweet()
+    client.create_tweet(text=chatgpt_tweet)
