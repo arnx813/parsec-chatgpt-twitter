@@ -12,7 +12,7 @@ def home():
 def endpoint():
     if request.method == 'POST':
         data = request.json
-        chatgpt_tweet = chatbot_completion('i received this json from parsec, a crypto analytics platform. i am converting this json data into a tweet that alerts users of important transactions that are happening in DeFi. i am posting this tweet on a parody sam bankman fried twitter account. could you provide me a tweet to use, written in an over-the nerdy and geeky tone, under 200 characters? ' + str(data))
+        chatgpt_tweet = chatbot_completion('i received this json from parsec, a crypto analytics platform. i am converting this json data into a tweet that alerts users of important transactions that are happening in DeFi. i am posting this tweet on a parody sam bankman fried twitter account. could you provide me a tweet to use, written in an over-the-top nerdy and geeky tone, under 200 characters? ' + str(data))
         print(chatgpt_tweet)
         create_tweet(chatgpt_tweet)
 
