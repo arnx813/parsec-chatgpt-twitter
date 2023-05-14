@@ -24,7 +24,6 @@ charset-normalizer==3.0.1
 click==8.1.3
 comm==0.1.2
 confection==0.0.4
-contourpy==1.0.7
 Corpora==1.0
 cryptography==39.0.0
 cycler==0.11.0
